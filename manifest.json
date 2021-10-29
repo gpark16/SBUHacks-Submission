@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "(HIPS) Hiding In Plain Sight",
+    "description": "What do you mean I'm not working?",
+    "version": "1.0",  
+    "permissions": ["storage", "activeTab", "scripting"],
+    "web_accessible_resources": [{
+        "resources": ["lMaskImages/*.png", "lMaskImages/*.jpg", "mMaskImages/*.jpg", "mMaskImages/*.png", "MemeImages/*.png", "MemeImages/*.jpg"],
+        "matches":["<all_urls>"]
+    }],
+    
+    "content_scripts":[
+        {
+            "matches":[
+               "<all_urls>"
+            ],
+            "js":["popup.js"]
+        }
+    ],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "16": "icon.png",
+          "32": "icon.png",
+          "48": "icon.png",
+          "128": "icon.png"
+        }
+      },
+      "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+
+
+}
